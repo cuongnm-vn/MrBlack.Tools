@@ -6,18 +6,18 @@ import { SettingsComponent } from '@app/users/settings/settings.component';
 import { UsersComponent } from '@app/users/users.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: UsersComponent,
-    children: [
-      { path: 'index', component: IndexComponent },
-      { path: 'settings', component: SettingsComponent }
-    ]
-  }
+    {
+        path: '',
+        component: UsersComponent,
+        children: [
+            { path: 'index', component: IndexComponent },
+            { path: 'settings', component: SettingsComponent }
+        ]
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class UsersRoutingModule { }

@@ -10,17 +10,17 @@ import { SharedModule } from '@shared/shared.module';
 import { SideBarNavComponent } from './layout/side-bar-nav/side-bar-nav.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    SharedModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
-  ],
-  declarations: [AppComponent, DashboardComponent, SideBarNavComponent]
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        SharedModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule
+    ],
+    declarations: [AppComponent, DashboardComponent, SideBarNavComponent]
 })
 export class AppModule { }
