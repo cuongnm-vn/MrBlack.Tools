@@ -1,0 +1,94 @@
+/* General */
+
+// variable
+@import './core.variable.scss';
+// bootstrap
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/grid';
+// material
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+// custom font
+$custom-typography: mat-typography-config( $font-family: $font-family-sans-serif);
+@include angular-material-typography($custom-typography);
+// other
+#root-container {
+    >.sidenav {
+        width: 250px;
+    }
+}
+
+// #main-container {
+//     height: calc(100vh - 64px);
+//     margin-top: $margin-top;
+// }
+.table-loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #loader {
+        left: initial;
+        top: initial;
+        margin: 0
+    }
+}
+
+* {
+    outline: none !important;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+/* Portlet */
+
+.portlet.light>.portlet-title .inputs.inputs-full-width {
+    display: block;
+    float: none;
+}
+
+.famfamfam-flags {
+    display: inline-block;
+}
+
+topbar-languageswitch {
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking,
+perfect-scrollbar>.ps.ps--scrolling-y>.ps__rail-y,
+perfect-scrollbar>.ps.ps--scrolling-x>.ps__rail-x {
+    background: transparent !important
+}

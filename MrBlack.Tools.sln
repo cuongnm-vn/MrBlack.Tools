@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{201874C3-7461-4A61-A455-2050E6F266D4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "angular", "angular", "{D0CF0780-AAFF-4991-AB4E-4C8135CDF03E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.AngularUI", "angular\MrBlack.Tools.AngularUI.csproj", "{65548D5D-7FF8-4578-905E-5D7CF208DE86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspnet-core", "aspnet-core", "{2C22B508-40EE-4D48-B51F-703B94F38366}"
+	ProjectSection(SolutionItems) = preProject
+		aspnet-core\.gitattributes = aspnet-core\.gitattributes
+		aspnet-core\.gitignore = aspnet-core\.gitignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.Application", "aspnet-core\src\MrBlack.Tools.Application\MrBlack.Tools.Application.csproj", "{722E0FB8-8A95-413D-B824-D49944286E37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.Core", "aspnet-core\src\MrBlack.Tools.Core\MrBlack.Tools.Core.csproj", "{93BF4FC3-79A0-4A63-82D8-043499DA0369}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.EntityFrameworkCore", "aspnet-core\src\MrBlack.Tools.EntityFrameworkCore\MrBlack.Tools.EntityFrameworkCore.csproj", "{0D0158A6-4FF4-4638-AAE9-292266113318}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.Migrator", "aspnet-core\src\MrBlack.Tools.Migrator\MrBlack.Tools.Migrator.csproj", "{4E6B3488-F727-4B21-ACFA-CB8075CAC212}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.Web.Core", "aspnet-core\src\MrBlack.Tools.Web.Core\MrBlack.Tools.Web.Core.csproj", "{890FF043-CE8F-472B-87C8-1D32BB9967BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MrBlack.Tools.Web.Host", "aspnet-core\src\MrBlack.Tools.Web.Host\MrBlack.Tools.Web.Host.csproj", "{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65548D5D-7FF8-4578-905E-5D7CF208DE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65548D5D-7FF8-4578-905E-5D7CF208DE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65548D5D-7FF8-4578-905E-5D7CF208DE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65548D5D-7FF8-4578-905E-5D7CF208DE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722E0FB8-8A95-413D-B824-D49944286E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722E0FB8-8A95-413D-B824-D49944286E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722E0FB8-8A95-413D-B824-D49944286E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722E0FB8-8A95-413D-B824-D49944286E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BF4FC3-79A0-4A63-82D8-043499DA0369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BF4FC3-79A0-4A63-82D8-043499DA0369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BF4FC3-79A0-4A63-82D8-043499DA0369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BF4FC3-79A0-4A63-82D8-043499DA0369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0158A6-4FF4-4638-AAE9-292266113318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0158A6-4FF4-4638-AAE9-292266113318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0158A6-4FF4-4638-AAE9-292266113318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0158A6-4FF4-4638-AAE9-292266113318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6B3488-F727-4B21-ACFA-CB8075CAC212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6B3488-F727-4B21-ACFA-CB8075CAC212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6B3488-F727-4B21-ACFA-CB8075CAC212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6B3488-F727-4B21-ACFA-CB8075CAC212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{890FF043-CE8F-472B-87C8-1D32BB9967BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890FF043-CE8F-472B-87C8-1D32BB9967BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890FF043-CE8F-472B-87C8-1D32BB9967BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{890FF043-CE8F-472B-87C8-1D32BB9967BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65548D5D-7FF8-4578-905E-5D7CF208DE86} = {D0CF0780-AAFF-4991-AB4E-4C8135CDF03E}
+		{722E0FB8-8A95-413D-B824-D49944286E37} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+		{93BF4FC3-79A0-4A63-82D8-043499DA0369} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+		{0D0158A6-4FF4-4638-AAE9-292266113318} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+		{4E6B3488-F727-4B21-ACFA-CB8075CAC212} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+		{890FF043-CE8F-472B-87C8-1D32BB9967BF} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+		{FA0A6BAA-1C23-4852-8B4E-D259F10FC1A4} = {2C22B508-40EE-4D48-B51F-703B94F38366}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E51E513-559E-4D4B-AC5D-2733CF9CBD78}
+	EndGlobalSection
+EndGlobal

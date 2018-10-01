@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container" id="root-container" autosize>
+    <mat-sidenav #ldrawer class="sidenav mat-elevation-z8" style="background-color: #2d323e; width: 300px;" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+        <mat-toolbar color="primary" style="background-color: #1e2129" class="align-items-center">
+            <div class="logo"><img class="logo-icon" src="assets/logo.svg"><span class="logo-text text-muted">MTools</span></div>
+            <span class="spacer"></span>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="ldrawer.toggle()" *ngIf="ldrawer.opened">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <div class="user" fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
+            <div class="h3 text-light w-100 text-center text-truncate">{{appSession.user.name}}</div>
+            <div class="h5 text-muted w-100 text-center text-truncate">{{appSession.user.emailAddress}}</div>
+            <div class="avatar-container"><img class="avatar" src="assets/images/user.jpg"></div>
+        </div>
+        <perfect-scrollbar style="max-height: calc(100vh - 260px);">
+            <app-side-bar-nav></app-side-bar-nav>
+        </perfect-scrollbar>
+    </mat-sidenav>
+    <mat-sidenav #rdrawer position="end" class="sidenav mat-elevation-z2" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'">
+
+    </mat-sidenav>
+    <mat-sidenav-content id="main-container">
+        <mat-toolbar class="mat-elevation-z2 sticky-top pr-0">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="ldrawer.toggle()" *ngIf="!ldrawer.opened">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+
+            <span class="spacer"></span>
+            <button mat-button class="align-self-stretch" [matMenuTriggerFor]="menu"><img class="avatar rounded-circle mr-2" width="36px" src="assets/images/user.jpg"> {{appSession.user.surname}} </button>
+            <mat-menu #menu="matMenu" yPosition="above" [overlapTrigger]="false">
+                <button mat-menu-item>
+                    <mat-icon>input</mat-icon> {{l('Logout')}}
+                </button>
+            </mat-menu>
+            <button mat-button class="align-self-stretch" (click)="rdrawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">message</mat-icon>
+            </button>
+        </mat-toolbar>
+        <section class="container-fluid pt-3 pb-3" style="height: calc(100vh - 64px); overflow: auto">
+            <router-outlet></router-outlet>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>
