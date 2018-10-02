@@ -26,7 +26,7 @@
             </button>
 
             <span class="spacer"></span>
-            <button mat-button class="align-self-stretch" [matMenuTriggerFor]="menu"><img class="avatar rounded-circle mr-2" width="36px" src="assets/images/user.jpg"> {{appSession.user.surname}} </button>
+            <button mat-button class="align-self-stretch" [matMenuTriggerFor]="menu"><img class="avatar rounded-circle mr-2" width="42px" src="assets/images/user.jpg"> {{appSession.user.surname}} </button>
             <mat-menu #menu="matMenu" yPosition="above" [overlapTrigger]="false">
                 <button mat-menu-item>
                     <mat-icon>input</mat-icon> {{l('Logout')}}
@@ -36,7 +36,7 @@
                 <mat-icon aria-label="Side nav toggle icon">message</mat-icon>
             </button>
         </mat-toolbar>
-        <section class="container-fluid pt-3 pb-3" style="height: calc(100vh - 64px); overflow: auto">
+        <section style="height: calc(100vh - 64px); overflow: auto">
             <router-outlet></router-outlet>
         </section>
     </mat-sidenav-content>
