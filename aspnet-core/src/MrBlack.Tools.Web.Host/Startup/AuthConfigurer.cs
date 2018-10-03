@@ -75,7 +75,7 @@ namespace MrBlack.Tools.Web.Host.Startup
             {
                 context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken, AppConsts.DefaultPassPhrase);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // Console.WriteLine(e);
                 // throw;

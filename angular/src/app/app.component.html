@@ -28,7 +28,7 @@
             <span class="spacer"></span>
             <button mat-button class="align-self-stretch" [matMenuTriggerFor]="menu"><img class="avatar rounded-circle mr-2" width="42px" src="assets/images/user.jpg"> {{appSession.user.surname}} </button>
             <mat-menu #menu="matMenu" yPosition="above" [overlapTrigger]="false">
-                <button mat-menu-item>
+                <button mat-menu-item (click)="logout()">
                     <mat-icon>input</mat-icon> {{l('Logout')}}
                 </button>
             </mat-menu>

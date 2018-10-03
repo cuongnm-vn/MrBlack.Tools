@@ -1,84 +1,27 @@
-<h3>Basic Buttons</h3>
-<div class="button-row">
-  <button mat-button>Basic</button>
-  <button mat-button color="primary">Primary</button>
-  <button mat-button color="accent">Accent</button>
-  <button mat-button color="warn">Warn</button>
-  <button mat-button disabled>Disabled</button>
-  <a mat-button routerLink=".">Link</a>
-</div>
+<mat-card style="width: 360px;">
+    <mat-card-header class="d-flex flex-column justify-content-center">
+        <img src="/assets/logo.svg">
+        <span class="text-center pt-1 pb-4">{{l('WellcomeMessage')}}</span>
+    </mat-card-header>
 
-<h3>Raised Buttons</h3>
-<div class="button-row">
-  <button mat-raised-button>Basic</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
-  <a mat-raised-button routerLink=".">Link</a>
-</div>
-
-<h3>Stroked Buttons</h3>
-<div class="button-row">
-  <button mat-stroked-button>Basic</button>
-  <button mat-stroked-button color="primary">Primary</button>
-  <button mat-stroked-button color="accent">Accent</button>
-  <button mat-stroked-button color="warn">Warn</button>
-  <button mat-stroked-button disabled>Disabled</button>
-  <a mat-stroked-button routerLink=".">Link</a>
-</div>
-
-<h3>Flat Buttons</h3>
-<div class="button-row">
-  <button mat-flat-button>Basic</button>
-  <button mat-flat-button color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button disabled>Disabled</button>
-  <a mat-flat-button routerLink=".">Link</a>
-</div>
-
-<h3>Icon Buttons</h3>
-<div class="button-row">
-  <button mat-icon-button>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <button mat-icon-button color="primary">
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <button mat-icon-button color="accent">
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <button mat-icon-button color="warn">
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <button mat-icon-button disabled>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-</div>
-
-<h3>Fab Buttons</h3>
-<div class="button-row">
-  <button mat-fab>Basic</button>
-  <button mat-fab color="primary">Primary</button>
-  <button mat-fab color="accent">Accent</button>
-  <button mat-fab color="warn">Warn</button>
-  <button mat-fab disabled>Disabled</button>
-  <button mat-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <a mat-fab routerLink=".">Link</a>
-</div>
-
-<h3>Mini Fab Buttons</h3>
-<div class="button-row">
-  <button mat-mini-fab>Basic</button>
-  <button mat-mini-fab color="primary">Primary</button>
-  <button mat-mini-fab color="accent">Accent</button>
-  <button mat-mini-fab color="warn">Warn</button>
-  <button mat-mini-fab disabled>Disabled</button>
-  <button mat-mini-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <a mat-mini-fab routerLink=".">Link</a>
-</div>
+    <mat-card-content>
+        <form [formGroup]="frmLogin" novalidate>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{l('UserNameOrEmail')}}</mat-label>
+                <input formControlName="userNameOrEmailAddress" matInput autocomplete>
+                <mat-icon matSuffix *ngIf="submitted && frmLogin.controls['userNameOrEmailAddress'].errors?.required" [matTooltipPosition]="'before'" matTooltipClass="bg-danger text-light mr-1" matTooltip="{{l('ThisFieldIsRequired')}}" color="warn">info</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{l('Password')}}</mat-label>
+                <input formControlName="password" type="password" matInput autocomplete="off">
+                <mat-icon matSuffix *ngIf="submitted && frmLogin.controls['password'].errors?.required" [matTooltipPosition]="'before'" matTooltipClass="bg-danger text-light mr-1" matTooltip="{{l('ThisFieldIsRequired')}}" color="warn">info</mat-icon>
+            </mat-form-field>
+            <div class="w-100">
+                <mat-checkbox color="primary">{{l("RememberMe")}}</mat-checkbox>
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+                <button mat-raised-button color="primary" class="w-75" (click)="login()">{{l('LogIn')}}</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

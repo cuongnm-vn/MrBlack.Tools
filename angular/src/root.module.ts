@@ -15,6 +15,7 @@ import { RootComponent } from './root.component';
 import { RootRoutingModule } from './root-routing.module';
 import { ServiceProxyModule } from '@shared/service-proxies/service-proxy.module';
 import { SharedModule } from '@shared/shared.module';
+import swal from 'sweetalert2';
 
 export function appInitializerFactory(injector: Injector,
     platformLocation: PlatformLocation) {
@@ -82,6 +83,11 @@ export function getCurrentLanguage(): string {
 })
 
 export class RootModule {
+    constructor() {
+        abp.message.error = (message, title) => {
+            swal({ type: 'error', title: title, text: message });
+        }
+    }
 
 }
 
